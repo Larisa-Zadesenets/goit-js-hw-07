@@ -14,21 +14,18 @@ function createImgCard (galleryItems) {
       class="gallery__image"
       src="${preview}"
       alt="${description}"
-      
-    />
+     />
   </a>
 </li>
         `;
     }).join("");
 }
-
 function onImgCardClick(evt) {
     evt.preventDefault();
     if (!evt.target.classList.contains("gallery__image")) {
         return;
     }
     console.log (evt.target);
-
 }  
 const lightbox = new SimpleLightbox(".gallery__link", 
 { captionsData: "alt", captionDelay: "250" })
